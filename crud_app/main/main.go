@@ -59,7 +59,7 @@ func main() {
 
 func getMovies(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w)
+	json.NewEncoder(w).Encode(movies) //show the remaining movies on the slice
 }
 
 func deleteMovie(w http.ResponseWriter, r *http.Request) {
